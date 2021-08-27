@@ -3,18 +3,18 @@ import { componentMethodCaller } from '../lib/utils';
 
 
 export async function setup(inputs: IInputs): Promise<any> {
-  return await componentMethodCaller(inputs, 'devsapp/fc-proxied-invoke', 'setup');
+  return await componentMethodCaller(inputs, 'devsapp/fc-proxied-invoke@dev', 'setup');
 }
 
 export async function invoke(inputs: IInputs): Promise<any> {
-  return await componentMethodCaller(inputs, 'devsapp/fc-proxied-invoke', 'invoke');
+  return await componentMethodCaller(inputs, 'devsapp/fc-proxied-invoke@dev', 'invoke');
 }
 
 export async function clean(inputs: IInputs): Promise<any> {
-  return await componentMethodCaller(inputs, 'devsapp/fc-proxied-invoke', 'clean');
+  return await componentMethodCaller(inputs, 'devsapp/fc-proxied-invoke@dev', 'clean');
 }
 export async function cleanup(inputs: IInputs): Promise<any> {
-  return await componentMethodCaller(inputs, 'devsapp/fc-proxied-invoke', 'cleanup');
+  return await componentMethodCaller(inputs, 'devsapp/fc-proxied-invoke@dev', 'cleanup');
 }
 
 /**

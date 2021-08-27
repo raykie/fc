@@ -54,7 +54,7 @@ export default class FcBaseComponent extends BaseComponent {
       return;
     }
 
-    const deployRes: any = await this.componentMethodCaller(inputs, 'devsapp/fc-deploy', 'deploy', props, args);
+    const deployRes: any = await this.componentMethodCaller(inputs, 'devsapp/fc-deploy@dev', 'deploy', props, args);
     tips.showNextTip(args, tips.showDeployNextTips);
 
     console.log('\n\n');
@@ -371,7 +371,7 @@ export default class FcBaseComponent extends BaseComponent {
     nonOptionsArgs.shift();
     const { nasConfig, vpcConfig, name, role } = props?.service || {};
     if (commandName === 'init' && isAutoConfig(nasConfig)) {
-      return await this.componentMethodCaller(inputs, 'devsapp/fc-deploy', 'deployAutoNas', props, assumeYes ? '--assume-yes' : null);
+      return await this.componentMethodCaller(inputs, 'devsapp/fc-deploy@dev', 'deployAutoNas', props, assumeYes ? '--assume-yes' : null);
     } else if (commandName === 'init') {
       // nasConfig is not auto
       for (const mountPoint of nasConfig?.mountPoints) {

@@ -188,7 +188,7 @@ export default class Remove {
     }
 
     if (subCommand === 'domain') {
-      const componentName = 'devsapp/fc-deploy';
+      const componentName = 'devsapp/fc-deploy@dev';
       const componentInputs = this.genInputs(inputs, componentName, inputs.props);
       return (await core.loadComponent(componentName)).remove(componentInputs);
     }
@@ -220,7 +220,7 @@ export default class Remove {
       await this.removeVersion({ region, serviceName, assumeYes });
     }
 
-    const componentName = 'devsapp/fc-deploy';
+    const componentName = 'devsapp/fc-deploy@dev';
     const componentInputs = this.genInputs(inputs, componentName, inputs.props);
     return (await core.loadComponent(componentName)).remove(componentInputs);
   }
